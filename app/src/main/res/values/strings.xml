@@ -6,4 +6,5 @@
     <string name="radio_ext">Exterior Only</string>
     <string name="radio_ext_int">Exterior with Interior Vacuum</string>
     <string name="button">Calculate Package</string>
+    <string name="toast">Purchase 12 or more washes to get a discount.</string>
 </resources>
