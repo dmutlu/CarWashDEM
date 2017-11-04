@@ -43,18 +43,14 @@ public class MainActivity extends AppCompatActivity
 
             if (washes == 0)
             {
-                Context context = getApplicationContext();
-                CharSequence text = getString(R.string.toast);
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                myToast();
             }
-            else if (radioExt.isSelected())
+            else if (radioExt.isChecked())
             {
                 if (washes < 12)
                 {
                     custPrice = washes * extPrice;
+                    myToast();
                 }
 
                 else
@@ -66,11 +62,12 @@ public class MainActivity extends AppCompatActivity
                 output.setText(currency.format(custPrice));
 
             }
-            else if (radioExtInt.isSelected())
+            else if (radioExtInt.isChecked())
             {
                 if (washes < 12)
                 {
                     custPrice = washes * extIntPrice;
+                    myToast();
                 }
 
                 else
@@ -82,5 +79,15 @@ public class MainActivity extends AppCompatActivity
                 output.setText(currency.format(custPrice));
             }
         });
+    }
+
+    private void myToast()
+    {
+        Context context = getApplicationContext();
+        CharSequence text = getString(R.string.toast);
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }
