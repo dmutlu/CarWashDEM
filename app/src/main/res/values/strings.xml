@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Car Wash DEM</string>
+    <string name="title">Car Wash Packages</string>
+    <string name="sub_title">Buy 12+ washes for a discount!</string>
+    <string name="hint">Number of Washes</string>
+    <string name="radio_ext">Exterior Only</string>
+    <string name="radio_ext_int">Exterior with Interior Vacuum</string>
+    <string name="button">Calculate Package</string>
 </resources>
