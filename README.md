@@ -13,5 +13,5 @@ In this project I have figured out how to configure IntelliJ IDEA 2017.3 to use 
 1. Edit your {gradle-wrapper.properties} under [gradle/wrapper] and make sure the distributionUrl is set to https\://services.gradle.org/distributions/gradle-4.1-all.zip
 2. Edit your {gradle.properties} and add "android.injected.build.model.only.versioned=3", without quotes.
 3. Edit your top-level {build.gradle} and replicate my {build.gradle} found here: https://github.com/dmutlu/CarWashDEM/blob/master/build.gradle
-4. Edit your app {build.gradle} and replicate my {build.gradle} found here: https://github.com/dmutlu/CarWashDEM/blob/master/app/build.gradle
+4. Edit your app {build.gradle} and replicate my {build.gradle}, specifically the [complileOptions], and [buildTypes] sections, found here: https://github.com/dmutlu/CarWashDEM/blob/master/app/build.gradle
 5. Finally, goto [File] and select [Invalidate Caches / Restart]. When prompted, invalidate and restart.
