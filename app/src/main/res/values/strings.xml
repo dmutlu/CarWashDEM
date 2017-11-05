@@ -7,4 +7,9 @@
     <string name="radio_ext_int">Exterior with Interior Vacuum</string>
     <string name="button">Calculate Package</string>
     <string name="toast">Purchase 12 or more washes to get a discount.</string>
+
+    <plurals name="outputs">
+        <item quantity="one">\u0020for %d wash.</item>
+        <item quantity="other">\u0020for %d washes.</item>
+    </plurals>
 </resources>

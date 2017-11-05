@@ -1,6 +1,7 @@
 package edu.umbc.dmutlu1.carwashdem;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.*;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity
     private final double extIntPriceDiscount = 12.99;
     private int washes;
     private double custPrice;
+    private String carWash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         final RadioButton radioExt = findViewById(R.id.radioExtOnly);
         final RadioButton radioExtInt = findViewById(R.id.radioExtInt);
         final EditText numWash = findViewById(R.id.editText);
+        Resources res = getResources();
         Button calcBtn = findViewById(R.id.button);
         NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.getDefault());
 
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity
             else
             {
                 washes = Integer.parseInt(numWash.getText().toString());
+                carWash = res.getQuantityString(R.plurals.outputs, washes, washes);
             }
 
             if (washes == 0)
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 output.setVisibility(1);
-                output.setText(currency.format(custPrice));
+                output.setText(currency.format(custPrice) + carWash);
 
             }
             else if (radioExtInt.isChecked())
@@ -76,7 +80,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 output.setVisibility(1);
-                output.setText(currency.format(custPrice));
+                output.setText(currency.format(custPrice) + carWash);
             }
         });
     }
