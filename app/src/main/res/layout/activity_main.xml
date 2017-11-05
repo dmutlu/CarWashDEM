@@ -59,7 +59,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_marginTop="8dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                        android:textColor="@color/colorPrimaryDark"/>
+                        android:textColor="@color/matBlue"/>
 
                 <TextView
                         android:text="@string/sub_title"
